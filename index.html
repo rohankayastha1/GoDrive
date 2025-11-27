@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoDrive | North East India's Premium Driver Service</title>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">     
+    <script src="script.js"></script>               
+    
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <i class="fas fa-car-side"></i>
+                Go<span>Drive</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('services')">Services</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                <li><a href="#" onclick="showPage('login')" class="btn-login">Login</a></li>
+            </ul>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('services')">Services</a>
+            <a href="#" onclick="showPage('about')">About</a>
+            <a href="#" onclick="showPage('contact')">Contact</a>
+            <a href="#" onclick="showPage('login')">Login</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- === HOME PAGE === -->
+        <section id="home" class="page-section">
+            <header class="hero">
+                <div class="hero-text">
+                    <h1>Drive Safe in the <span class="highlight">North East</span></h1>
+                    <p>Need a driver for an hour or a week? GoDrive connects you with verified professional drivers in Guwahati, Shillong, and beyond.</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary" onclick="showPage('login')">Book Now</button>
+                        <button class="btn btn-secondary" onclick="showPage('services')">View Rates</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Driving Car">
+                </div>
+            </header>
+
+            <section class="features">
+                <h2>Why GoDrive?</h2>
+                <h3>The Smart Way to Travel</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="icon-box"><i class="fas fa-clock"></i></div>
+                        <h4>Pay Per Hour</h4>
+                        <p>Whether it's a 2-hour shopping trip or a full day office run, pay only for the time you use.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                        <h4>Verified Drivers</h4>
+                        <p>Background checks, driving tests, and police verification. Your safety is our priority.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>Local Experts</h4>
+                        <p>Our drivers know the hill roads and city shortcuts of the North East better than GPS.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- === SERVICES PAGE === -->
+        <section id="services" class="page-section hidden">
+            <div class="services-header">
+                <h1>Our Services & Rates</h1>
+                <p>Transparent pricing. No hidden charges.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <h3>Hourly City Drive</h3>
+                    <p>Perfect for errands, shopping, or office commutes within city limits.</p>
+                    <div class="price-tag">₹99 <span>/ hour</span></div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Min booking 2 hours</li>
+                        <li><i class="fas fa-check"></i> Instant confirmation</li>
+                        <li><i class="fas fa-check"></i> One-way or Round trip</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full" onclick="showPage('login')">Book Now</button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card popular">
+                    <div class="badge-popular">Most Popular</div>
+                    <div class="service-icon"><i class="fas fa-route"></i></div>
+                    <h3>Outstation Trip</h3>
+                    <p>Planning a weekend to Shillong or Kaziranga? We've got you.</p>
+                    <div class="price-tag">₹500 <span>/ day</span></div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 12 hours driving time</li>
+                        <li><i class="fas fa-check"></i> One-way or Round trip</li>
+                        <li><i class="fas fa-check"></i> Experienced hill drivers</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full" onclick="showPage('login')">Book Outstation</button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Monthly Driver</h3>
+                    <p>A dedicated driver for your daily commute. No daily booking needed.</p>
+                    <div class="price-tag">₹15k <span>/ month</span></div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 6 days a week</li>
+                        <li><i class="fas fa-check"></i> Same driver everyday</li>
+                        <li><i class="fas fa-check"></i> Background verified</li>
+                    </ul>
+                    <button class="btn btn-dark btn-full" style="background:#1e293b; color:white" onclick="showPage('contact')">Contact Sales</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- === ABOUT PAGE === -->
+        <section id="about" class="page-section hidden">
+            <div class="about-section">
+                <div class="about-content">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2;">Driven by Trust, <br>Fueled by Passion.</h2>
+                    <p style="color: var(--text-light); margin-bottom: 20px;">
+                        GoDrive started in 2024 with a simple mission: to make transportation in the North East safer and more convenient. We realized that while many people own cars, driving them in traffic or on long hill journeys isn't always easy.
+                    </p>
+                    <p style="color: var(--text-light);">
+                        Headquartered in Guwahati, we are a team of locals who understand the terrain. We don't just provide drivers; we provide travel companions who ensure you reach your destination safely.
+                    </p>
+                    <div class="about-stats">
+                        <div>
+                            <span class="stat-number">500+</span>
+                            <span style="color:var(--text-light)">Active Drivers</span>
+                        </div>
+                        <div>
+                            <span class="stat-number">10k+</span>
+                            <span style="color:var(--text-light)">Happy Trips</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Team meeting" style="width:100%; border-radius:1rem; box-shadow:var(--shadow)">
+                </div>
+            </div>
+        </section>
+
+        <!-- === CONTACT PAGE === -->
+        <section id="contact" class="page-section hidden">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2 style="font-size:2rem; margin-bottom:20px;">Get in Touch</h2>
+                    <p style="margin-bottom:30px; opacity:0.9;">Have questions about booking or want to join as a driver? We're here to help.</p>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3 style="font-weight:600">Office Address</h3>
+                            <p style="opacity:0.9">GS Road, Christian Basti<br>Guwahati, Assam 781005</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3 style="font-weight:600">Phone</h3>
+                            <p style="opacity:0.9">+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3 style="font-weight:600">Email</h3>
+                            <p style="opacity:0.9">support@godrive-ne.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2 style="font-size:1.5rem; margin-bottom:20px; color:var(--text-dark)">Send a Message</h2>
+                    <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="4" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- === LOGIN PAGE === -->
+        <section id="login" class="page-section hidden">
+            <div class="login-wrapper">
+                <div class="login-card">
+                    <div class="login-header">
+                        <i class="fas fa-car-side"></i>
+                        <h2>Welcome Back</h2>
+                        <p style="color:var(--text-light); margin-bottom:20px">Sign in to book your driver</p>
+                    </div>
+                    <form onsubmit="event.preventDefault(); alert('Login simulated!'); showPage('home');">
+                        <div class="form-group" style="text-align:left">
+                            <label>Email address</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group" style="text-align:left">
+                            <label>Password</label>
+                            <input type="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%">Sign In</button>
+                        
+                        <div class="divider">
+                            <span>Or continue with</span>
+                        </div>
+
+                        <button type="button" class="btn btn-google">
+                            <i class="fab fa-google" style="color: #db4437;"></i> Google
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom:15px">
+                    <i class="fas fa-car-side" style="color:var(--primary-color)"></i>
+                    <span style="color:white; font-size:1.5rem; font-weight:700">GoDrive</span>
+                </div>
+                <p>The most trusted hourly driver booking platform for North East India. Safe, affordable, and professional.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('services')">Services</a></li>
+                    <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Connect</h3>
+                <div style="display:flex; gap:15px; font-size:1.5rem; margin-top:10px">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 GoDrive North East. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
